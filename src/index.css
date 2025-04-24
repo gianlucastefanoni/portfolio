@@ -1,10 +1,11 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 @tailwind utilities;
 
 @theme {
     --font-bebas: "Bebas Neue", "sans-serif"; 
     --font-cormorant: "Cormorant Garamond", "sans-serif";
     --font-inter: "Inter", "sans-serif";
-    --color-title-orange: #FFAE8C
+    --color-custom-black: #191818;
+    --color-title-orange: #FFAE8C;
+    --color-custom-white: #F0EDEC;
   }
