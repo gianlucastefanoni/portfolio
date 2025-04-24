@@ -12,7 +12,7 @@ export const AboutMe = () => {
       </div>
       <div>
         👋 Hi there! I'm a&nbsp;
-        <span className="text-title-orange font-semibold">
+        <span className="text-title-orange font-semibold text-lg">
           Full Stack Developer
         </span>
         &nbsp;with a passion for turning ideas into intuitive and scalable web
@@ -20,33 +20,12 @@ export const AboutMe = () => {
         <br />
         With hands-on experience across the entire stack, I love:
         <ul className="text-white space-y-2 my-4 ml-8">
-          <li>
-            🚀 Crafting seamless&nbsp;
-            <span className="text-title-orange font-semibold">
-              user interfaces
-            </span>
-          </li>
-          <li>
-            🛠️ Writing &nbsp;
-            <span className="text-title-orange font-semibold">
-              clean, maintainable backend code
-            </span>
-          </li>
-          <li>
-            🤝 Collaborating in&nbsp;
-            <span className="text-title-orange font-semibold">teams</span>&nbsp;
-            to build impactful products
-          </li>
+          <li>🚀 Crafting seamless user interfaces</li>
+          <li>🛠️ Writing clean, maintainable backend code</li>
+          <li>🤝 Collaborating in teams to build impactful products</li>
         </ul>
-        ✨ I thrive on&nbsp;
-        <span className="text-title-orange font-semibold">
-          problem-solving, continuous improvement
-        </span>
-        , and bringing a&nbsp;
-        <span className="text-title-orange font-semibold">
-          proactive mindset
-        </span>
-        &nbsp; to every project I touch.
+        ✨ I thrive on problem-solving, continuous improvement, and bringing a
+        proactive mindset to every project I touch.
       </div>
     </div>
   );
