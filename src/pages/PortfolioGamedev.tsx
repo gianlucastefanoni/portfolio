@@ -3,6 +3,7 @@ import { AboutMeGame } from "../components/PorfolioGameDev/AboutMeGame";
 import Hero from "../components/PorfolioGameDev/Hero";
 import { Navbar } from "../components/PorfolioGameDev/Navbar";
 import { DownloadSection } from "../components/PorfolioGameDev/DownloadSection";
+import { GameProjects } from "../components/PorfolioGameDev/GameProjects/GameProjects";
 
 export const PortfolioGamedev = () => {
   const [active, setActive] = useState("about");
@@ -13,9 +14,14 @@ export const PortfolioGamedev = () => {
         <>
           <Hero />
           <AboutMeGame setActive={setActive} />
-          <DownloadSection />
         </>
       )}
+      {active === "projects" && (
+        <>
+          <GameProjects />
+        </>
+      )}
+      <DownloadSection />
     </div>
   );
 };

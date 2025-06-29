@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../../assets/profile.png"; // aggiorna il path se necessario
+import profileImg from "../../assets/profile.png";
 import { useTranslation } from "../../i18n/useTranslation";
 
 const Hero: React.FC = () => {

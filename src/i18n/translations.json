@@ -17,7 +17,17 @@
       "cv_description": "CV with my work experience, hobbies, and volunteering.",
       "cv_button": "CV and certificates",
       "certificate_description": "Training certificate in video game creation with Unreal Engine 5 and C++.",
-      "certificate_button": "Download my Certificate"
+      "certificate_button": "Download my Certificate",
+      "project_polar_title": "Polar Platformer",
+      "project_polar_short": "A 3D platformer set in a frozen kingdom.",
+      "project_polar_full": "A 3D platformer. You play as a penguin exploring snowy islands and reconnecting the world through gameplay. key features are: destroyable objects, dynamic objects creation using blueprint variables, animations and physics",
+      "project_kickerz_title": "Mega Kickerz",
+      "project_kickerz_short": "An arcade soccer game",
+      "project_kickerz_full": "Mega Kickerz is an action-packed arcade soccer game where scoring goals is only half the fun. Players must skillfully use ball bounces off the stadium walls and unleash powerful hits to knock opponents out of the way. The game focuses heavily on physics-based gameplay, dynamic object impulses, and fast-paced multiplayer matches. It also features character customization system.",
+      "project_tank_title": "Tank Training Grounds",
+      "project_tank_short": "A combat-focused tank game.",
+      "project_tank_full": "Tank Training Grounds is a combat-focused tank game developed during my Unreal Engine 5 course. Built as part of my training certification, the game explores core gameplay systems such as AI-controlled enemies, health and damage management, combat effects, and a responsive HUD.",
+      "projects_description":"My game development journey blends both technical and creative skills. I’m confident working in Blueprints and C++, and have experience implementing input systems, animation states, events, HUDs, and actor state management. In my personal projects, I also took care of character animations and 3D modeling, allowing me to shape gameplay and visuals holistically—from code to art."
     },
     "it": {
       "about_title": "Chi sono",
@@ -37,6 +47,17 @@
       "cv_description": "CV con le mie esperienze lavorative, hobby e volontariato.",
       "cv_button": "Scarica il mio CV",
       "certificate_description": "Certificato di training nella creazione di videogiochi con Unreal Engine 5 e C++.",
-      "certificate_button": "Scarica il mio Certificato"
+      "certificate_button": "Scarica il mio Certificato",
+      "project_polar_title": "Platformer Polare",
+      "project_polar_short": "Un platformer 3D ambientato in un regno ghiacciato.",
+      "project_polar_full": "Un platformer 3D. Vesti i panni di un pinguino che esplora isole innevate e riconnette il mondo attraverso il gameplay. Le funzionalità principali includono: oggetti distruttibili, creazione dinamica di oggetti tramite variabili blueprint, animazioni e fisica.",
+      "project_kickerz_title": "Mega Kickerz",
+      "project_kickerz_short": "Un gioco di calcio arcade.",
+      "project_kickerz_full": "Mega Kickerz è un gioco di calcio arcade ricco di azione in cui fare gol è solo metà del divertimento. I giocatori devono sfruttare abilmente i rimbalzi della palla sulle pareti dello stadio e colpire gli avversari per farsi strada. Il gioco punta molto su una fisica realistica, impulsi dinamici sugli oggetti, partite multiplayer frenetiche e un sistema di personalizzazione del personaggio.",
+      "project_tank_title": "Campo di Addestramento Tank",
+      "project_tank_short": "Un gioco di carri armati orientato al combattimento.",
+      "project_tank_full": "Campo di Addestramento Tank è un gioco di carri armati focalizzato sul combattimento, sviluppato durante il mio corso su Unreal Engine 5. Creato come parte della mia certificazione, il gioco esplora sistemi di gameplay fondamentali come nemici controllati da IA, gestione della salute e dei danni, effetti di combattimento e un HUD reattivo.",
+      "projects_description": "Il mio percorso nello sviluppo di videogiochi unisce competenze tecniche e creative. Lavoro con sicurezza sia in Blueprints che in C++, e ho esperienza nell’implementazione di sistemi di input, stati di animazione, eventi, HUD e gestione degli stati degli attori. Nei miei progetti personali mi sono occupato anche di animazioni dei personaggi e modellazione 3D, dando forma al gameplay e alla parte visiva in modo completo: dal codice all’arte."
+
     }
   }
