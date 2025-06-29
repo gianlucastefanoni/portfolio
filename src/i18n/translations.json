@@ -1,0 +1,42 @@
+{
+    "en": {
+      "about_title": "About Me",
+      "projects_title": "Projects",
+      "contact_title": "Contacts",
+      "explore_projects": "Explore my projects →",
+      "game_developer": "Game Developer with skills in game design and programming.",
+      "greeting": "Hello! I’m a",
+      "greeting_details_1": "focused on the intersection of design and programming to craft immersive and engaging gameplay experiences.",
+      "greeting_details_2": "Currently building my skills across game mechanics, level design, and software development.",
+      "head_list": "I enjoy:",
+      "list_1": "Designing intuitive and enjoyable game experiences",
+      "list_2": "Writing clean, efficient, and maintainable code",
+      "list_3": "Collaborating with teams to bring creative ideas to life",
+      "tail_list": "I’m motivated by learning, problem-solving, and delivering quality games that players love.",
+      "download_title": "Download",
+      "cv_description": "CV with my work experience, hobbies, and volunteering.",
+      "cv_button": "CV and certificates",
+      "certificate_description": "Training certificate in video game creation with Unreal Engine 5 and C++.",
+      "certificate_button": "Download my Certificate"
+    },
+    "it": {
+      "about_title": "Chi sono",
+      "projects_title": "Progetti",
+      "contact_title": "Contatti",
+      "explore_projects": "Esplora i miei progetti →",
+      "game_developer": "Game Developer con competenze in design e programmazione di videogiochi",
+      "greeting": "Ciao! Sono un",
+      "greeting_details_1": "focalizzato sull’intersezione tra design e programmazione per creare esperienze di gioco coinvolgenti e immersive.",
+      "greeting_details_2": "Attualmente sto sviluppando le mie competenze in meccaniche di gioco, level design e sviluppo software.",
+      "head_list": "Mi piace:",
+      "list_1": "Progettare esperienze di gioco intuitive e coinvolgenti",
+      "list_2": "Scrivere codice pulito, efficiente e manutenibile",
+      "list_3": "Collaborare con i team per dare vita a idee creative",
+      "tail_list": "Sono motivato dall’apprendimento, dalla risoluzione dei problemi e dal creare giochi di qualità che i giocatori amano.",
+      "download_title": "CV e Certificati",
+      "cv_description": "CV con le mie esperienze lavorative, hobby e volontariato.",
+      "cv_button": "Scarica il mio CV",
+      "certificate_description": "Certificato di training nella creazione di videogiochi con Unreal Engine 5 e C++.",
+      "certificate_button": "Scarica il mio Certificato"
+    }
+  }

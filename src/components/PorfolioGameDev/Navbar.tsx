@@ -1,0 +1,42 @@
+import { useState } from "react";
+import { LanguageSwitcher } from "../LanguageSwitcher";
+import { useTranslation } from "../../i18n/useTranslation";
+
+interface NavbarProps {
+  active: string;
+  setActive: (s: string) => void;
+}
+
+export const Navbar = ({ active, setActive }: NavbarProps) => {
+  const { t } = useTranslation();
+  const links = [
+    { id: "about", label: "about_title" },
+    { id: "projects", label: "projects_title" },
+    { id: "contacts", label: "contact_title" },
+  ];
+
+  return (
+    <div className="flex px-8">
+      <nav className="w-fit mx-auto bg-teal-950 p-6 rounded-lg">
+        <ul className="flex justify-center gap-12 list-none m-0 p-0">
+          {links.map(({ id, label }) => (
+            <li key={id}>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActive(id);
+                }}
+                className={`uppercase px-4 py-2 rounded-md text-emerald-400 hover:underline cursor-pointer
+                transition-colors duration-300 ease-in-out
+                ${active === id ? "bg-teal-900" : "bg-transparent"}`}
+              >
+                {t(label)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <LanguageSwitcher />
+    </div>
+  );
+};
