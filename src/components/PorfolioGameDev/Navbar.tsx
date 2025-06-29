@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { useTranslation } from "../../i18n/useTranslation";
 
