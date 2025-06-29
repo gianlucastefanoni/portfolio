@@ -10,7 +10,7 @@ export const DownloadSection: React.FC = () => {
       <div>
         <p className="mb-2 text-gray-300">{t("cv_description")}</p>
         <a
-          href="/files/tuo-cv.pdf"
+          href="/files/StefanoniGianluca_CV.pdf"
           download
           className="inline-block bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold py-3 px-6 rounded-md"
         >
@@ -21,7 +21,7 @@ export const DownloadSection: React.FC = () => {
       <div>
         <p className="mb-2 text-gray-300">{t("certificate_description")}</p>
         <a
-          href="/files/tuo-certificato.pdf"
+          href="/files/UE5DeveloperCourse.pdf"
           download
           className="inline-block bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold py-3 px-6 rounded-md"
         >

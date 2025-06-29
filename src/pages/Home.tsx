@@ -16,7 +16,7 @@ export const Home = () => {
         </div>
         <div
           className="cursor-pointer"
-          onClick={() => navigate("/portfolio/gamedev/aboutme")}
+          onClick={() => navigate("/portfolio/gamedev")}
         >
           Game Developer
         </div>
