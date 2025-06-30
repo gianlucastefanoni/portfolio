@@ -9,11 +9,12 @@ export const GameProjects: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <>
-      <h1 className="mx-auto w-6xl font-light mt-8">
+    <div className="px-4 sm:px-8 py-8">
+      <h1 className="max-w-4xl mx-auto text-lg sm:text-xl font-light mb-6 text-gray-300 text-center sm:text-left">
         {t("projects_description")}
       </h1>
-      <section className="flex flex-col md:flex-row gap-6 justify-center items-stretch p-8">
+
+      <section className="flex flex-col gap-6 md:flex-row md:flex-wrap justify-center items-center">
         {projectIds.map((id) => (
           <ProjectCard
             key={id}
@@ -23,6 +24,6 @@ export const GameProjects: React.FC = () => {
           />
         ))}
       </section>
-    </>
+    </div>
   );
 };

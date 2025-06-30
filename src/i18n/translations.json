@@ -6,7 +6,7 @@
       "explore_projects": "Explore my projects →",
       "game_developer": "Game Developer with skills in game design and programming.",
       "greeting": "Hello! I’m a",
-      "greeting_details_1": "focused on the intersection of design and programming to craft immersive and engaging gameplay experiences.",
+      "greeting_details_1": "I enjoy working where design and code meet. to craft immersive and engaging gameplay experiences.",
       "greeting_details_2": "Currently building my skills across game mechanics, level design, and software development.",
       "head_list": "I enjoy:",
       "list_1": "Designing intuitive and enjoyable game experiences",
@@ -27,7 +27,13 @@
       "project_tank_title": "Tank Training Grounds",
       "project_tank_short": "A combat-focused tank game.",
       "project_tank_full": "Tank Training Grounds is a combat-focused tank game developed during my Unreal Engine 5 course. Built as part of my training certification, the game explores core gameplay systems such as AI-controlled enemies, health and damage management, combat effects, and a responsive HUD.",
-      "projects_description":"My game development journey blends both technical and creative skills. I’m confident working in Blueprints and C++, and have experience implementing input systems, animation states, events, HUDs, and actor state management. In my personal projects, I also took care of character animations and 3D modeling, allowing me to shape gameplay and visuals holistically—from code to art."
+      "projects_description":"My game development journey blends both technical and creative skills. I’m confident working in Blueprints and C++, and have experience implementing input systems, animation states, events, HUDs, and actor state management. In my personal projects, I also took care of character animations and 3D modeling, allowing me to shape gameplay and visuals completely: from code to art.",
+      "contact_intro": "Feel free to reach out using the form below or via email.",
+      "contact_name": "Your Name",
+      "contact_email": "Your Email",
+      "contact_message": "Your Message",
+      "contact_button": "Send Message",
+      "tap_to_expand": "Tap to expand"
     },
     "it": {
       "about_title": "Chi sono",
@@ -36,7 +42,7 @@
       "explore_projects": "Esplora i miei progetti →",
       "game_developer": "Game Developer con competenze in design e programmazione di videogiochi",
       "greeting": "Ciao! Sono un",
-      "greeting_details_1": "focalizzato sull’intersezione tra design e programmazione per creare esperienze di gioco coinvolgenti e immersive.",
+      "greeting_details_1": "Mi piace lavorare dove design e codice si incontrano, per creare esperienze di gioco coinvolgenti e immersive.",
       "greeting_details_2": "Attualmente sto sviluppando le mie competenze in meccaniche di gioco, level design e sviluppo software.",
       "head_list": "Mi piace:",
       "list_1": "Progettare esperienze di gioco intuitive e coinvolgenti",
@@ -57,7 +63,12 @@
       "project_tank_title": "Campo di Addestramento Tank",
       "project_tank_short": "Un gioco di carri armati orientato al combattimento.",
       "project_tank_full": "Campo di Addestramento Tank è un gioco di carri armati focalizzato sul combattimento, sviluppato durante il mio corso su Unreal Engine 5. Creato come parte della mia certificazione, il gioco esplora sistemi di gameplay fondamentali come nemici controllati da IA, gestione della salute e dei danni, effetti di combattimento e un HUD reattivo.",
-      "projects_description": "Il mio percorso nello sviluppo di videogiochi unisce competenze tecniche e creative. Lavoro con sicurezza sia in Blueprints che in C++, e ho esperienza nell’implementazione di sistemi di input, stati di animazione, eventi, HUD e gestione degli stati degli attori. Nei miei progetti personali mi sono occupato anche di animazioni dei personaggi e modellazione 3D, dando forma al gameplay e alla parte visiva in modo completo: dal codice all’arte."
-
+      "projects_description": "Il mio percorso nello sviluppo di videogiochi unisce competenze tecniche e creative. Lavoro con sicurezza sia in Blueprints che in C++, e ho esperienza nell’implementazione di sistemi di input, stati di animazione, eventi, HUD e gestione degli stati degli attori. Nei miei progetti personali mi sono occupato anche di animazioni dei personaggi e modellazione 3D, dando forma al gameplay e alla parte visiva in modo completo: dal codice al design.",
+      "contact_intro": "Scrivimi pure tramite il modulo qui sotto o via email.",
+      "contact_name": "Il tuo nome",
+      "contact_email": "La tua email",
+      "contact_message": "Il tuo messaggio",
+      "contact_button": "Invia messaggio",
+      "tap_to_expand": "tocca per espandere"
     }
   }

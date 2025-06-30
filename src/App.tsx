@@ -7,10 +7,10 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/portfolio" element={<Home />} />
-        <Route path="/portfolio/fullstack" element={<PortfolioFullstack />} />
-        <Route path="/portfolio/gamedev" element={<PortfolioGamedev />} />
-        <Route path="/" element={<Navigate to="/portfolio" replace />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/fullstack" element={<PortfolioFullstack />} />
+        <Route path="/gamedev" element={<PortfolioGamedev />} />
+        <Route path="/*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>
   );

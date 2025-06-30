@@ -15,9 +15,9 @@ export const Navbar = ({ active, setActive }: NavbarProps) => {
   ];
 
   return (
-    <div className="flex px-8">
-      <nav className="w-fit mx-auto bg-teal-950 p-6 rounded-lg">
-        <ul className="flex justify-center gap-12 list-none m-0 p-0">
+    <div className="flex flex-col sm:flex-row sm:justify-between items-center px-4 sm:px-8 gap-4 mb-4">
+      <nav className="w-full sm:w-fit mx-auto bg-teal-950 p-4 sm:p-6 rounded-lg">
+        <ul className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 list-none m-0 p-0">
           {links.map(({ id, label }) => (
             <li key={id}>
               <a
@@ -35,7 +35,9 @@ export const Navbar = ({ active, setActive }: NavbarProps) => {
           ))}
         </ul>
       </nav>
-      <LanguageSwitcher />
+      <div className="sm:self-center">
+        <LanguageSwitcher />
+      </div>
     </div>
   );
 };

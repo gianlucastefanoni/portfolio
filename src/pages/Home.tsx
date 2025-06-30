@@ -8,16 +8,10 @@ export const Home = () => {
         Stefanoni Gianluca
       </div>
       <div className="w-full h-2/3 flex justify-around items-center">
-        <div
-          className="cursor-pointer"
-          onClick={() => navigate("/portfolio/fullstack")}
-        >
+        <div className="cursor-pointer" onClick={() => navigate("/fullstack")}>
           Full Stack Developer
         </div>
-        <div
-          className="cursor-pointer"
-          onClick={() => navigate("/portfolio/gamedev")}
-        >
+        <div className="cursor-pointer" onClick={() => navigate("/gamedev")}>
           Game Developer
         </div>
       </div>

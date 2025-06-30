@@ -46,12 +46,17 @@ export const ProjectCard: React.FC<Props> = ({ id, isExpanded, onClick }) => {
       </h3>
 
       {!isExpanded && (
-        <img
-          onClick={onClick}
-          src={media.thumbnail}
-          alt={t(`project_${id}_title`)}
-          className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
-        />
+        <>
+          <img
+            onClick={onClick}
+            src={media.thumbnail}
+            alt={t(`project_${id}_title`)}
+            className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
+          />
+          <div className="block md:hidden text-xs text-emerald-400 mb-2 select-none">
+            {t("tap_to_expand")}
+          </div>
+        </>
       )}
 
       <p onClick={onClick} className="text-gray-300 mb-2 cursor-pointer">
