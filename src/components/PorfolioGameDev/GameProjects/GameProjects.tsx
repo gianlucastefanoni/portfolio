@@ -1,6 +1,7 @@
 import { forwardRef, useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { useTranslation } from "../../../i18n/useTranslation";
+import "../../../App.css"; 
 
 const projectIds = ["polar", "kickerz", "tank"];
 
@@ -13,12 +14,12 @@ export const GameProjects = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-white"
+      className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-white fade-in-up"
       style={{ scrollMarginTop: "50px" }}
     >
       {/* Titolo sezione */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400 title-animate">
           {t("projects_title")}
         </h2>
         <div className="mt-2 w-16 h-1 bg-emerald-400 mx-auto rounded-full" />

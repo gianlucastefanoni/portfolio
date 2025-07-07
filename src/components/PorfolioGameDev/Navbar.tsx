@@ -19,6 +19,13 @@ export const Navbar = ({ sectionRefs }: any) => {
   return (
     <header className="sm:sticky sm:top-0 sm:z-50 bg-teal-950/80 backdrop-blur-md border-b border-teal-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div
+          className="text-white text-xl font-semibold cursor-pointer select-none"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Torna in cima"
+        >
+          GIANLUCA STEFANONI
+        </div>
         <nav>
           <ul className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
             {links.map(({ id, label }) => (
@@ -33,6 +40,7 @@ export const Navbar = ({ sectionRefs }: any) => {
             ))}
           </ul>
         </nav>
+
         <LanguageSwitcher />
       </div>
     </header>

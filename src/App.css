@@ -1,0 +1,36 @@
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  @keyframes subtleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .title-animate {
+    animation: subtleBounce 3s ease-in-out infinite;
+  }
+
+  .line-animate {
+    width: 0;
+    animation: growWidth 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes growWidth {
+    to {
+      width: 4rem; /* 16 * 4 px = 64px */
+    }
+  }

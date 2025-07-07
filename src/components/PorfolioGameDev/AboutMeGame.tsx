@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { useTranslation } from "../../i18n/useTranslation";
+import "../../App.css"; 
 
 export const AboutMeGame = forwardRef<HTMLElement>((_, ref) => {
   const { t } = useTranslation();
@@ -7,12 +8,12 @@ export const AboutMeGame = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-white"
+      className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-white fade-in-up"
       style={{ scrollMarginTop: "50px" }}
     >
       {/* Titolo di sezione */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400 title-animate">
           {t("about_title")}
         </h2>
         <div className="mt-2 w-16 h-1 bg-emerald-400 mx-auto rounded-full" />
@@ -31,7 +32,7 @@ export const AboutMeGame = forwardRef<HTMLElement>((_, ref) => {
         <p>
           👋 {t("greeting")}
           <span className="text-emerald-400 font-medium">
-            &nbsp;Game Developer.
+            &nbsp;Game Developer
           </span>
           &nbsp;{t("greeting_details_1")}
         </p>

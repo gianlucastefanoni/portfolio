@@ -1,13 +1,16 @@
 import React from "react";
 import profileImg from "../../assets/profile.png";
 import { useTranslation } from "../../i18n/useTranslation";
+import "../../App.css";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
+
   return (
     <section className="flex items-center justify-center text-white px-4 sm:px-8 py-12">
-      <div className="flex flex-col sm:flex-row w-full max-w-6xl overflow-hidden rounded-2xl border border-teal-800 bg-teal-950/70 backdrop-blur-md shadow-md">
-
+      <div
+        className="flex flex-col sm:flex-row w-full max-w-6xl overflow-hidden rounded-2xl border border-teal-800 bg-teal-950/70 backdrop-blur-md shadow-md fade-in-up"
+      >
         {/* Immagine */}
         <div className="relative w-full sm:w-1/2 h-64 sm:h-96">
           <img
@@ -34,6 +37,5 @@ export const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-
   );
 };
