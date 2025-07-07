@@ -35,6 +35,8 @@
     }
   }
 
+
+  /*SEZIONE HOMEPAGE*/
   .home-netflix-style {
     background-color: #000;
     color: white;
@@ -43,11 +45,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
   }
   
   .main-title {
-    font-size: 4rem;
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
     text-align: center;
@@ -55,9 +59,10 @@
   
   .profiles {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
   }
   
   .profile-card {
@@ -70,8 +75,8 @@
   }
   
   .profile-card .avatar {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -91,6 +96,29 @@
   
   .profile-card span {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #ccc;
   }
+  
+  /* 📱 Mobile scaling without stacking */
+  @media (max-width: 600px) {
+    .main-title {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .profile-card .avatar {
+      width: 130px;
+      height: 130px;
+    }
+  
+    .profile-card span {
+      font-size: 1.1rem;
+    }
+  
+    .profiles {
+      gap: 1.5rem;
+    }
+  }
+  
+  
