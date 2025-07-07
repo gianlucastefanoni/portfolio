@@ -1,12 +1,7 @@
-import { LanguageSwitcher } from "../LanguageSwitcher";
 import { useTranslation } from "../../i18n/useTranslation";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
-interface NavbarProps {
-  active: string;
-  setActive: (s: string) => void;
-}
-
-export const Navbar = ({ active, setActive }: NavbarProps) => {
+export const Navbar = ({ sectionRefs }: any) => {
   const { t } = useTranslation();
   const links = [
     { id: "about", label: "about_title" },
@@ -14,30 +9,32 @@ export const Navbar = ({ active, setActive }: NavbarProps) => {
     { id: "contacts", label: "contact_title" },
   ];
 
+  const handleScroll = (id: string | number) => {
+    const ref = sectionRefs[id];
+    if (ref?.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between items-center px-4 sm:px-8 gap-4 mb-4">
-      <nav className="w-full sm:w-fit mx-auto bg-teal-950 p-4 sm:p-6 rounded-lg">
-        <ul className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 list-none m-0 p-0">
-          {links.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActive(id);
-                }}
-                className={`uppercase px-4 py-2 rounded-md text-emerald-400 hover:underline cursor-pointer
-                transition-colors duration-300 ease-in-out
-                ${active === id ? "bg-teal-900" : "bg-transparent"}`}
-              >
-                {t(label)}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="sm:self-center">
+    <header className="sm:sticky sm:top-0 sm:z-50 bg-teal-950/80 backdrop-blur-md border-b border-teal-800">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <nav>
+          <ul className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
+            {links.map(({ id, label }) => (
+              <li key={id}>
+                <button
+                  onClick={() => handleScroll(id)}
+                  className="uppercase text-sm tracking-wider text-emerald-400 hover:text-white transition-colors"
+                >
+                  {t(label)}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <LanguageSwitcher />
       </div>
-    </div>
+    </header>
   );
 };

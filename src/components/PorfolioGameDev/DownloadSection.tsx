@@ -4,7 +4,7 @@ import { useTranslation } from "../../i18n/useTranslation";
 export const DownloadSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="text-white px-4 sm:px-8 py-8 rounded-lg max-w-4xl mx-auto space-y-8">
+    <section className="text-white px-4 sm:px-8 py-8 rounded-lg max-w-6xl mx-auto space-y-8 w-full">
       <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-center sm:text-left">
         {t("download_title")}
       </h2>

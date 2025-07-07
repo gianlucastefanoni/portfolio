@@ -38,36 +38,52 @@ export const ProjectCard: React.FC<Props> = ({ id, isExpanded, onClick }) => {
 
   return (
     <div
-      className={` bg-teal-950 text-white rounded-lg shadow-lg p-6 w-full md:w-80 transform transition-all duration-300
-        ${isExpanded ? "scale-100 md:w-full" : "hover:scale-105"}`}
+      className={`w-full md:w-80 transition-all duration-300
+    ${isExpanded ? "md:w-full" : "hover:scale-[1.02]"}
+  `}
     >
-      <h3 onClick={onClick} className="text-xl font-bold mb-2 cursor-pointer">
-        {t(`project_${id}_title`)}
-      </h3>
+      <div
+        className={`rounded-xl p-6 sm:p-8 bg-teal-900/70 backdrop-blur-md border border-teal-800 transition-all duration-300
+      ${isExpanded ? "ring-1 ring-emerald-400" : "shadow-md"}
+      ${!isExpanded ? "min-h-[420px]" : ""}
+    `}
+      >
+        {/* Titolo */}
+        <h3
+          onClick={onClick}
+          className="text-2xl font-semibold tracking-tight mb-3 cursor-pointer text-emerald-400 hover:underline"
+        >
+          {t(`project_${id}_title`)}
+        </h3>
 
-      {!isExpanded && (
-        <>
-          <img
-            onClick={onClick}
-            src={media.thumbnail}
-            alt={t(`project_${id}_title`)}
-            className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
-          />
-          <div className="block md:hidden text-xs text-emerald-400 mb-2 select-none">
-            {t("tap_to_expand")}
-          </div>
-        </>
-      )}
+        {/* Thumbnail (solo se non espansa) */}
+        {!isExpanded && (
+          <>
+            <img
+              onClick={onClick}
+              src={media.thumbnail}
+              alt={t(`project_${id}_title`)}
+              className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
+            />
+            <div className="block md:hidden text-xs text-emerald-400 mb-2">
+              {t("tap_to_expand")}
+            </div>
+          </>
+        )}
 
-      <p onClick={onClick} className="text-gray-300 mb-2 cursor-pointer">
-        {isExpanded ? t(`project_${id}_full`) : t(`project_${id}_short`)}
-      </p>
+        {/* Descrizione */}
+        <p
+          onClick={onClick}
+          className="text-sm text-gray-300 leading-relaxed mb-4 cursor-pointer"
+        >
+          {isExpanded
+            ? t(`project_${id}_full`)
+            : t(`project_${id}_short`)}
+        </p>
 
-      {isExpanded && (
-        <>
-          <CarouselMedia sources={media.gallery} />
-        </>
-      )}
+        {/* Media Carousel */}
+        {isExpanded && <CarouselMedia sources={media.gallery} />}
+      </div>
     </div>
   );
 };
