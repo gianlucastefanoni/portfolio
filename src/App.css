@@ -34,3 +34,63 @@
       width: 4rem; /* 16 * 4 px = 64px */
     }
   }
+
+  .home-netflix-style {
+    background-color: #000;
+    color: white;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .profiles {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .profile-card .avatar {
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 transparent;
+  }
+  
+  .profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-card:hover .avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  }
+  
+  .profile-card span {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #ccc;
+  }
