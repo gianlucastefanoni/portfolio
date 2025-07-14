@@ -14,7 +14,7 @@ export const DownloadSection: React.FC = () => {
           {t("cv_description")}
         </p>
         <a
-          href="/files/StefanoniGianluca_CV.pdf"
+          href="/portfolio/files/StefanoniGianluca_CV.pdf"
           download
           className="inline-block bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md text-sm sm:text-base"
         >
@@ -27,7 +27,7 @@ export const DownloadSection: React.FC = () => {
           {t("certificate_description")}
         </p>
         <a
-          href="/files/UE5DeveloperCourse.pdf"
+          href="/portfolio/files/UE5DeveloperCourse.pdf"
           download
           className="inline-block bg-emerald-600 hover:bg-emerald-700 transition-colors text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md text-sm sm:text-base"
         >
