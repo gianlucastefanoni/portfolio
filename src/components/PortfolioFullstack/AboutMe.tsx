@@ -1,32 +1,69 @@
+import { useTranslation } from "../../i18n/useTranslation";
+import "../../App.css";
+
 export const AboutMe = () => {
+  const { t } = useTranslation();
+
+  const highlights = [
+    {
+      value: "01",
+      title: t("fullstack_about_highlight_1_title"),
+      text: t("fullstack_about_highlight_1_text"),
+    },
+    {
+      value: "02",
+      title: t("fullstack_about_highlight_2_title"),
+      text: t("fullstack_about_highlight_2_text"),
+    },
+    {
+      value: "03",
+      title: t("fullstack_about_highlight_3_title"),
+      text: t("fullstack_about_highlight_3_text"),
+    },
+  ];
+
   return (
-    <div className="flex flex-col !py-16 !px-64 gap-8">
-      <div className="w-full text-center font-bold">ABOUT ME</div>
-      <div className="bg-custom-black !p-2 w-fit rounded-lg">
-        <em>
-          “Great things in business are never done by one person. They’re done
-          by a team of people.”
-        </em>
-        <br />
-        <div className="text-title-orange font-bold">Steve Jobs.</div>
+    <section className="fullstack-about">
+      <div className="fullstack-section-heading">
+        <p>{t("fullstack_about_kicker")}</p>
+        <h2>{t("about_title")}</h2>
       </div>
-      <div>
-        👋 Hi there! I'm a&nbsp;
-        <span className="text-title-orange font-semibold text-lg">
-          Full Stack Developer
-        </span>
-        &nbsp;with a passion for turning ideas into intuitive and scalable web
-        applications.
-        <br />
-        With hands-on experience across the entire stack, I love:
-        <ul className="text-white space-y-2 my-4 ml-8">
-          <li>🚀 Crafting seamless user interfaces</li>
-          <li>🛠️ Writing clean, maintainable backend code</li>
-          <li>🤝 Collaborating in teams to build impactful products</li>
-        </ul>
-        ✨ I thrive on problem-solving, continuous improvement, and bringing a
-        proactive mindset to every project I touch.
+
+      <div className="fullstack-about-grid">
+        <div className="fullstack-about-bigtext">
+          <p>{t("fullstack_about_statement")}</p>
+        </div>
+
+        <div className="fullstack-about-copy">
+          <blockquote>
+            <p>{t("fullstack_about_quote")}</p>
+            <footer>{t("fullstack_about_quote_author")}</footer>
+          </blockquote>
+
+          <div className="fullstack-about-paragraphs">
+            <p>
+              {t("fullstack_about_intro_1")}{" "}
+              <span>{t("fullstack_about_role")}</span>{" "}
+              {t("fullstack_about_intro_2")}
+            </p>
+            <p>{t("fullstack_about_intro_3")}</p>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div className="fullstack-about-highlights">
+        {highlights.map((item, index) => (
+          <article
+            key={item.title}
+            className="fullstack-about-highlight"
+            style={{ animationDelay: `${index * 120}ms` }}
+          >
+            <span>{item.value}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 };

@@ -6,31 +6,45 @@ import userIcon2 from "../assets/user-icon-2.png";
 export const Home = () => {
   const navigate = useNavigate();
 
+  const profiles = [
+    {
+      title: "Full Stack",
+      subtitle: "Web apps, products, interfaces",
+      image: userIcon2,
+      route: "/fullstack",
+      className: "home-profile-fullstack",
+    },
+    {
+      title: "Game Dev",
+      subtitle: "Gameplay, systems, worlds",
+      image: userIcon1,
+      route: "/gamedev",
+      className: "home-profile-gamedev",
+    },
+  ];
+
   return (
-    <div className="home-netflix-style">
-      <h1 className="main-title">Stefanoni Gianluca</h1>
-
-      <div className="profiles">
-        <div
-          className="profile-card"
-          onClick={() => navigate("/fullstack")}
-        >
-          <div className="avatar">
-            <img src={userIcon2} alt="Full Stack" />
-          </div>
-          <span>Full Stack</span>
-        </div>
-
-        <div
-          className="profile-card"
-          onClick={() => navigate("/gamedev")}
-        >
-          <div className="avatar">
-            <img src={userIcon1} alt="Game Dev" />
-          </div>
-          <span>Game Dev</span>
-        </div>
+    <main className="home-selection">
+      <div className="home-selection-header">
+        <p>Choose your path</p>
+        <h1>Stefanoni Gianluca</h1>
       </div>
-    </div>
+
+      <section className="home-profile-grid" aria-label="Portfolio profiles">
+        {profiles.map((profile) => (
+          <button
+            key={profile.title}
+            className={`home-profile-card ${profile.className}`}
+            onClick={() => navigate(profile.route)}
+          >
+
+            <div className="home-profile-copy">
+              <span>{profile.subtitle}</span>
+              <strong>{profile.title}</strong>
+            </div>
+          </button>
+        ))}
+      </section>
+    </main>
   );
 };

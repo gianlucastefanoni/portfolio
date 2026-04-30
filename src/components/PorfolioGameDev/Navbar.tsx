@@ -1,15 +1,20 @@
 import { useTranslation } from "../../i18n/useTranslation";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 
-export const Navbar = ({ sectionRefs }: any) => {
+type NavbarProps = {
+  sectionRefs: Record<string, React.RefObject<HTMLElement>>;
+};
+
+export const Navbar = ({ sectionRefs }: NavbarProps) => {
   const { t } = useTranslation();
+
   const links = [
     { id: "about", label: "about_title" },
     { id: "projects", label: "projects_title" },
     { id: "contacts", label: "contact_title" },
   ];
 
-  const handleScroll = (id: string | number) => {
+  const handleScroll = (id: string) => {
     const ref = sectionRefs[id];
     if (ref?.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -17,31 +22,28 @@ export const Navbar = ({ sectionRefs }: any) => {
   };
 
   return (
-    <header className="sm:sticky sm:top-0 sm:z-50 bg-teal-950/80 backdrop-blur-md border-b border-teal-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div
-          className="text-white text-xl font-semibold cursor-pointer select-none"
+    <header className="game-navbar">
+      <div className="game-navbar-inner">
+        <button
+          className="game-navbar-brand"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          aria-label="Torna in cima"
+          aria-label={t("nav_back_top")}
         >
-          GIANLUCA STEFANONI
-        </div>
-        <nav>
-          <ul className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10">
-            {links.map(({ id, label }) => (
-              <li key={id}>
-                <button
-                  onClick={() => handleScroll(id)}
-                  className="uppercase text-sm tracking-wider text-emerald-400 hover:text-white transition-colors"
-                >
-                  {t(label)}
-                </button>
-              </li>
-            ))}
-          </ul>
+          <span>{t("nav_status")}</span>
+          <strong>Gianluca Stefanoni</strong>
+        </button>
+
+        <nav className="game-navbar-nav" aria-label={t("nav_primary")}>
+          {links.map(({ id, label }) => (
+            <button key={id} onClick={() => handleScroll(id)}>
+              {t(label)}
+            </button>
+          ))}
         </nav>
 
-        <LanguageSwitcher />
+        <div className="game-navbar-actions">
+          <LanguageSwitcher />
+        </div>
       </div>
     </header>
   );

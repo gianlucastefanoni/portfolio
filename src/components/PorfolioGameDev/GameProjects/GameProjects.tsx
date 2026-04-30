@@ -1,45 +1,47 @@
 import { forwardRef, useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { useTranslation } from "../../../i18n/useTranslation";
-import "../../../App.css"; 
+import "../../../App.css";
 
-const projectIds = ["polar", "kickerz", "tank"];
+const projectIds = ["ants", "polar", "tank"];
 
 export const GameProjects = forwardRef<HTMLElement>((_, ref) => {
   const { t } = useTranslation();
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>("ants");
+
   const orderedProjects = expandedId
     ? [expandedId, ...projectIds.filter((id) => id !== expandedId)]
     : projectIds;
+
   return (
     <section
       ref={ref}
-      className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-white fade-in-up"
-      style={{ scrollMarginTop: "50px" }}
+      className="mx-auto max-w-6xl px-4 py-14 text-white sm:px-6"
+      style={{ scrollMarginTop: "72px" }}
     >
-      {/* Titolo sezione */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-emerald-400 title-animate">
-          {t("projects_title")}
-        </h2>
-        <div className="mt-2 w-16 h-1 bg-emerald-400 mx-auto rounded-full" />
+      <div className="mb-10 grid gap-5 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
+            {t("game_projects_eyebrow")}
+          </p>
+          <h2 className="mt-3 text-4xl font-black tracking-tight text-white sm:text-5xl">
+            {t("projects_title")}
+          </h2>
+        </div>
+
+        <p className="max-w-3xl text-sm leading-7 text-slate-300 sm:text-base md:justify-self-end">
+          {t("projects_description")}
+        </p>
       </div>
 
-      {/* Descrizione */}
-      <p className="text-center text-gray-300 text-sm sm:text-base max-w-4xl mx-auto mb-8 leading-relaxed">
-        {t("projects_description")}
-      </p>
-
-      {/* Cards */}
-      <div className="flex flex-col gap-6 md:flex-row md:flex-wrap justify-center items-stretch">
-        {orderedProjects.map((id) => (
+      <div className="grid gap-5">
+        {orderedProjects.map((id, index) => (
           <ProjectCard
             key={id}
             id={id}
+            number={index + 1}
             isExpanded={expandedId === id}
-            onClick={() =>
-              setExpandedId(expandedId === id ? null : id)
-            }
+            onClick={() => setExpandedId(expandedId === id ? null : id)}
           />
         ))}
       </div>

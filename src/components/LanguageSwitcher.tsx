@@ -1,18 +1,21 @@
+import { useTranslation } from "../i18n/useTranslation";
 import { useLanguageStore } from "../store/useLanguageStore";
 
 export const LanguageSwitcher = () => {
+  const { t } = useTranslation();
   const { language, setLanguage } = useLanguageStore();
 
   return (
-    <div className="relative inline-block">
+    <label className="game-language-switcher">
+      <span className="sr-only">{t("language_label")}</span>
       <select
         value={language}
         onChange={(e) => setLanguage(e.target.value as "en" | "it")}
-        className="bg-teal-950 text-white border border-teal-700 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none pr-8"
+        aria-label={t("language_label")}
       >
-        <option value="en">🇬🇧 English</option>
-        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">EN</option>
+        <option value="it">IT</option>
       </select>
-    </div>
+    </label>
   );
 };

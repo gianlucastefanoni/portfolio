@@ -17,73 +17,52 @@ import {
   LINK_SQLDEV,
   LINK_TS,
 } from "../../consts/link";
+import { useTranslation } from "../../i18n/useTranslation";
+import "../../App.css";
+
+const skills = [
+  { label: "TypeScript", src: ts, href: LINK_TS, tone: "warm" },
+  { label: "React", src: react, href: LINK_REACT, tone: "cool" },
+  { label: "Angular", src: angular, href: LINK_ANGULAR, tone: "hot" },
+  { label: "Vite", src: vite, href: LINK_GITHUB, tone: "cool" },
+  { label: "GitHub", src: github, href: LINK_GITHUB, tone: "neutral" },
+  { label: "C#", src: csharp, href: LINK_CSHARP, tone: "cool" },
+  { label: "Java", src: java, href: LINK_JAVA, tone: "warm" },
+  { label: "SQL", src: sqldev, href: LINK_SQLDEV, tone: "neutral" },
+  { label: "Figma", src: figma, href: LINK_FIGMA, tone: "hot" },
+];
 
 export const TechSkills = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="flex flex-col gap-8 p-16 items-center">
-      <div className="w-fit text-center font-bold">
-        <span className="text-2xl/tight text-title-orange">20+</span>
-        <br />
-        TECH SKILLS
+    <section className="fullstack-skills">
+      <div className="fullstack-section-heading">
+        <p>{t("fullstack_skills_kicker")}</p>
+        <h2>{t("fullstack_skills_title")}</h2>
       </div>
-      <div className="w-fit flex gap-8">
-        <img
-          className="h-16 cursor-pointer"
-          src={ts}
-          alt="TypeScript"
-          onClick={() => window.open(LINK_TS, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={react}
-          alt="React"
-          onClick={() => window.open(LINK_REACT, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={angular}
-          alt="Angular"
-          onClick={() => window.open(LINK_ANGULAR, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={vite}
-          alt="Vite"
-          onClick={() => window.open(LINK_GITHUB, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={github}
-          alt="github"
-          onClick={() => window.open(LINK_GITHUB, "blank_")}
-        />
+
+      <div className="fullstack-skills-layout">
+        <div className="fullstack-skills-copy">
+          <span>{t("fullstack_skills_count")}</span>
+          <p>{t("fullstack_skills_description")}</p>
+        </div>
+
+        <div className="fullstack-skill-grid">
+          {skills.map((skill, index) => (
+            <button
+              key={skill.label}
+              className={`fullstack-skill-card ${skill.tone}`}
+              style={{ animationDelay: `${index * 70}ms` }}
+              onClick={() => window.open(skill.href, "_blank")}
+              aria-label={`${t("fullstack_open_skill")} ${skill.label}`}
+            >
+              <img src={skill.src} alt="" />
+              <strong>{skill.label}</strong>
+            </button>
+          ))}
+        </div>
       </div>
-      <div className="w-fit flex gap-8">
-        <img
-          className="h-16 cursor-pointer"
-          src={csharp}
-          alt="C#"
-          onClick={() => window.open(LINK_CSHARP, "blank_")}
-        />
-        <img
-          className="h-14 p-1 bg-white rounded-lg cursor-pointer"
-          src={java}
-          alt="Java"
-          onClick={() => window.open(LINK_JAVA, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={sqldev}
-          alt="Oracle SQL Developer"
-          onClick={() => window.open(LINK_SQLDEV, "blank_")}
-        />
-        <img
-          className="h-16 cursor-pointer"
-          src={figma}
-          alt="Figma"
-          onClick={() => window.open(LINK_FIGMA, "blank_")}
-        />
-      </div>
-    </div>
+    </section>
   );
 };

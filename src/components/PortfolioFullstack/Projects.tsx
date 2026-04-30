@@ -1,45 +1,68 @@
-import { ProjectCard } from "./PojectCard";
+import { ProjectCard } from "./ProjectCard";
 import collab from "../../assets/screenshots/collab.png";
-import collab_full from "../../assets/screenshots/collab_full.png";
+import collabFull from "../../assets/screenshots/collab_full.png";
 import equip from "../../assets/screenshots/equip.png";
-import equip_full from "../../assets/screenshots/equip_full.png";
+import equipFull from "../../assets/screenshots/equip_full.png";
 import tm from "../../assets/screenshots/tm.png";
-import tm_full from "../../assets/screenshots/tm_full.png";
+import tmFull from "../../assets/screenshots/tm_full.png";
+import { useTranslation } from "../../i18n/useTranslation";
+import "../../App.css";
+
+const projects = [
+  {
+    id: "collab",
+    src: collab,
+    link: collabFull,
+    titleKey: "fullstack_project_collab_title",
+    descriptionKey: "fullstack_project_collab_description",
+    metaKey: "fullstack_project_collab_meta",
+  },
+  {
+    id: "equip",
+    src: equip,
+    link: equipFull,
+    titleKey: "fullstack_project_equip_title",
+    descriptionKey: "fullstack_project_equip_description",
+    metaKey: "fullstack_project_equip_meta",
+  },
+  {
+    id: "tm",
+    src: tm,
+    link: tmFull,
+    titleKey: "fullstack_project_tm_title",
+    descriptionKey: "fullstack_project_tm_description",
+    metaKey: "fullstack_project_tm_meta",
+  },
+];
 
 export const Projects = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="flex flex-col gap-8 py-16 px-64 items-center">
-      <div className="w-fit text-center font-bold">
-        <span className="text-2xl/tight text-title-orange">15+</span>
-        <br />
-        PROJECTS SHIPPED
+    <section id="fullstack-projects" className="fullstack-projects">
+      <div className="fullstack-section-heading">
+        <p>{t("fullstack_projects_kicker")}</p>
+        <h2>{t("projects_title")}</h2>
       </div>
-      <div className="flex gap-8">
-        <ProjectCard
-          src={collab}
-          title={"STUDENT COLLABORATION"}
-          description={
-            "This platform allows university students to apply for student collaboration opportunities by submitting their skills and preferences. The BackOffice can create and publish calls, manage requests from university departments, evaluate applications, and automatically generate ranking lists."
-          }
-          link={collab_full}
-        />
-        <ProjectCard
-          src={equip}
-          title={"REQUEST CERTIFICATE OF EQUIVALENCE"}
-          description={
-            "This platform allows users to request the certificate of the equivalence of their foreign academic degree. Users can upload and download required documents, track the status of their application, and manage the payment process online."
-          }
-          link={equip_full}
-        />
-        <ProjectCard
-          src={tm}
-          title={"TAILOR TASK MANAGER"}
-          description={
-            "This platform manages custom haute couture orders, from collecting client measurements and requests to assigning tickets to tailors. It includes a calendar-based tracking system to monitor delivery timelines, manage delays, and streamline the production workflow."
-          }
-          link={tm_full}
-        />
+
+      <div className="fullstack-projects-intro">
+        <span>{t("fullstack_projects_count")}</span>
+        <p>{t("fullstack_projects_description")}</p>
       </div>
-    </div>
+
+      <div className="fullstack-project-list">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            index={index + 1}
+            src={project.src}
+            title={t(project.titleKey)}
+            description={t(project.descriptionKey)}
+            meta={t(project.metaKey)}
+            link={project.link}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
